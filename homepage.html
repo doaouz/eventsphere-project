@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventSphere</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <div class="logo">
+            <img src="images/logo.svg" > 
+            </div>
+          <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Events</a>
+            <a href="#">Communities</a>
+            <a href="#" class="profile-btn">Profile</a>
+          </div>
+        </nav>
+      </header>
+      
+      <!-- Search Bar Outside Header -->
+      <div class="search-bar">
+        <div class="search-input-wrapper">
+          <button class="search-icon-btn">
+            <img src="images/search-icon.svg" alt="Search">
+          </button>
+          <input type="text" placeholder="Search events, communities">
+          <button class="mic-icon-btn">
+            <img src="images/mic-icon.svg" alt="Microphone">
+          </button>
+        </div>
+      </div>
+
+  <main>
+    <section class="categories">
+      <ul>
+        <li><img src="images/party-icon.svg" alt="Party"><span>Party</span></li>
+        <li><img src="images/concert-icon.svg" alt="Concert"><span>Concert</span></li>
+        <li><img src="images/workshop-icon.svg" alt="Workshop"><span>Workshop</span></li>
+        <li><img src="images/trip-icon.svg" alt="Trip"><span>Trip</span></li>
+        <li><img src="images/games-icon.svg" alt="Game Nights"><span>Game Nights</span></li>
+        <li><img src="images/cinema-icon.svg" alt="Cinema"><span>Cinema</span></li>
+        <li><img src="images/science-icon.svg" alt="Science Fair"><span>Science Fair</span></li>
+        <li><img src="images/add-more.svg" alt="See All"><span>See All</span></li>
+      </ul>
+    </section>
+
+    <section class="carousel">
+      <h2 class="title">Join the Communities You Like</h2>
+      <div class="carousel-container">
+        <button class="arrow left-arrow">‹</button>
+        <div class="carousel-items">
+          <div style="background-image: url(images/artlover.png);" class="carousel-item">Artlover Group<br>35 Participants<br>Open to everyone</div>
+          <div style="background-image: url(images/bicycle.png);" class="carousel-item">Daytime Cyclists<br>12 Participants<br>Open to everyone</div>
+          <div style="background-image: url(images/parties.png);" class="carousel-item">Young Partiers<br>42 Participants<br>Open to everyone</div>
+          <div style="background-image: url(images/enthusiasts.png);" class="carousel-item">DIY Enthusiasts<br>57 Participants<br>Private Group</div>
+        </div>
+        <button class="arrow right-arrow">›</button>
+      </div>
+    </section>
+
+    <section class="events">
+      <div class="event-cards">
+        <div class="event-card">
+          <div class="card-image">
+            <img src="images/book-club-stars.png" alt="Book Club">
+            <div class="card-overlay">
+              <p>@booklovercassie</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>Book Club Stars Meeting</h3>
+            <p>The time and location is in detail.</p>
+            <div class="card-actions">
+              <button class="join-btn">I WILL JOIN!</button>
+              <button class="no-btn">NO</button>
+            </div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="card-image">
+            <img src="images/watercolor.png" alt="Watercolor Workshop">
+            <div class="card-overlay">
+              <p>@ressamzeynep</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>Watercolor Workshop</h3>
+            <p>Hi! This workshop is open again.</p>
+            <div class="card-actions">
+              <button class="join-btn">I WILL JOIN!</button>
+              <button class="no-btn">NO</button>
+            </div>
+          </div>
+        </div>
+        <div class="discover-card">
+          <p>Discover more exciting events!<p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

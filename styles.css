@@ -1,0 +1,421 @@
+:root {
+    --main-color: #FF467E; /* A shade of blue */
+}
+  
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure it always fills the viewport */
+    background-color: #f9f9f9; /* Optional: Add a background color */
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start; /* Start content from the top */
+    width: 100%;
+    padding: 20px; /* Add padding for spacing */
+    gap: 20px; /* Space between child elements */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+main > section {
+    width: 100%;
+    margin: 0 auto; /* Center the sections within the main */
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+main > * {
+    float: none; /* Reset floats */
+    margin: 0 auto; /* Center all child elements */
+}
+
+header {
+    width: 100%;
+    max-width: 1200px;
+    position: sticky;
+    top: 0; /* Stick to the top of the viewport */
+    background-color: #f9f9f9; /* Optional: Add a background color */
+    z-index: 10; /* Ensure it stays above other elements */
+    border-radius:20px;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar a {
+    padding: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff5a60;
+}
+
+/* Search Bar Styling */
+.search-bar {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px;
+    box-sizing: border-box;
+}
+  
+  .search-input-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 80%;
+    background-color: #fff;
+    border: 1px solid var(--main-color);
+    border-radius: 16px;
+    padding: 5px 7px;
+    box-sizing: border-box;
+  }
+  
+  .search-input-wrapper input {
+    flex: 1; /* Allows the input to grow and take up available space */
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 20px;
+  }
+  
+  .search-input-wrapper button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .search-icon-btn img,
+  .mic-icon-btn img {
+    width: 20px;
+    height: 20px;
+  }
+
+.menu a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ff5a60;
+}
+
+.profile-btn {
+    display: inline-flex; /* Flexbox for centering the icon and text */
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Space between the icon and text */
+    border: 1px solid #ff467e; /* Add a border with the main color */
+    background-color: transparent; /* Make the background transparent */
+    color: #ff467e; /* Use the main color for the text */
+    padding: 5px 15px; /* Adjust padding for a balanced look */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 14px; /* Adjust font size */
+    font-weight: 500; /* Add some weight to the text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.profile-btn:hover {
+    background-color: #ff467e; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+.profile-btn img {
+    width: 14px; /* Adjust the icon size */
+    height: 14px;
+}
+
+
+.carousel {
+    justify-content: center;
+    margin: 20px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    background: linear-gradient(90deg, #FFE4CC 0%, #FFAEC6 100%);
+    justify-content: center;
+
+}
+
+.carousel-items {
+    display: flex;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    color: #f9f9f9;
+    text-align: center;
+}
+
+.carousel-item {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    scroll-snap-align: start;
+    text-align: center;
+    border-radius: 16px;
+    background-size: cover; /* Ensures the image covers the whole element */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    display: flex; /* To align text */
+    flex-direction: column;
+    justify-content: center; /* Centers text vertically */
+    align-items: center; /* Centers text horizontally */
+    color: white; /* Ensure text is visible */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Optional: Adds text contrast */
+    width: 300px;
+    height: 160px;
+}
+
+.arrow {
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    height: 75px;
+}
+
+.left-arrow {
+    left: 10px;
+    height: 75px;
+}
+
+.right-arrow {
+    right: 10px;
+    height: 75px;
+}
+
+
+.event-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.event-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 280px; /* Adjusted for better alignment */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.event-card .card-image {
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+}
+
+.event-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-card .card-image .card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.event-card .card-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.event-card .card-content h3 {
+    font-size: 18px;
+    color: #000000;
+    margin: 0;
+}
+
+.event-card .card-content p {
+    font-size: 14px;
+    color: #555555;
+    margin: 0;
+}
+
+.event-card .card-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.event-card .join-btn,
+.event-card .no-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.event-card .join-btn {
+    background: var(--main-color);
+    color: #ffffff;
+}
+
+.event-card .no-btn {
+    background: #f2f2f2;
+    color: #000000;
+    border: 1px solid #cccccc;
+}
+
+.event-card .join-btn:hover {
+    background: #e03e6e;
+}
+
+.event-card .no-btn:hover {
+    background: #eaeaea;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.discover-card {
+    background: linear-gradient(90deg, #FF6190 13%, #FF2D46 100%),     url('images/background.png');    ;
+    background-size: cover; /* Adjust image scaling */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 28px;
+    max-width: 40%;
+
+}
+
+.discover-card p{
+    align-self: flex-start;
+    padding-inline: 40px 0px;
+}
+
+.categories {
+    display: flex;
+    justify-content: center; /* Center the categories */
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+.categories ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center; /* Center the list items */
+    align-items: center;
+    gap: 20px; /* Add space between category items */
+    padding: 0;
+    margin: 0 auto; /* Center the <ul> itself */
+    max-width: 80%; /* Optional: Limit the width of the list */
+}
+
+.categories li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+
+.categories li:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.categories li img {
+    width: 30px; /* Increase size for better visibility */
+    height: 30px;
+    margin-bottom: 8px; /* Space between icon and text */
+}
+
+.categories li span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+}
+
+.categories li span:hover {
+    color: var(--main-color); /* Change color on hover */
+}
+
+.title {
+   text-align: start;
+   color:#FF0E56;
+   padding-left: 50px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .navbar a {
+        padding: 10px 15px; /* Reduce padding */
+    }
+
+    .search-bar {
+        padding: 10px;
+    }
+}
